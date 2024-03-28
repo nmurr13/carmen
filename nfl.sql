@@ -45,8 +45,18 @@ SELECT name, position FROM players ORDER BY salary ASC LIMIT 100;
 
 -- 12. The names of all the players on the Buffalo Bills
 
+SELECT players.name, teams.name
+FROM players, teams
+WHERE players.team_id=teams.id AND teams.name LIKE 'Buffalo Bills';
 
 -- 13. The total salary of all players on the New York Giants
 
+SELECT SUM(players.salary) 
+FROM players, teams
+WHERE players.team_id=teams.id AND teams.name LIKE 'New York Giants';
 
 -- 14. The player with the lowest salary on the Green Bay Packers
+
+SELECT players.name 
+FROM players, teams
+WHERE players.team_id=teams.id AND teams.name LIKE 'Green Bay Packers' ORDER BY players.salary ASC LIMIT 1;
