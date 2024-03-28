@@ -58,12 +58,19 @@ SELECT name,continent,region FROM country WHERE code='BRA';
 -- #	name	continent	region
 -- 1	Brazil	South America	South America
 
-
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed
 --  towards the capital! Look up the country's capital, and get there pronto! Send us the name of where 
 --  you're headed and we'll follow right behind you!
 
+SELECT capital FROM country WHERE code='BRA';
 
+-- #	capital
+-- 1	211
+
+SELECT name FROM city WHERE id=211;
+
+-- #	name
+-- 1	Brasilia
 
 
 -- Clue #7: She knows we're on to her – her taxi dropped her off at the international airport, and she beat us to the boarding gates. We have one chance to catch her, we just have to know where she's heading and beat her to the landing dock.
@@ -77,13 +84,17 @@ SELECT name,continent,region FROM country WHERE code='BRA';
 -- So I'm off to add one to the population I find
 -- In a city of ninety-one thousand and now, eighty five.
 
+SELECT name,countrycode FROM city WHERE population=91084;
+
+-- #	name	countrycode
+-- 1	Santa Monica	USA
 
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
 
 
 
 
--- She's in ____________________________!
+-- She's in Santa Monica, CA in the USA!
 
 
 
