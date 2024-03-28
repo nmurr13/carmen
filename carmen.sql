@@ -26,3 +26,15 @@ SELECT * FROM country WHERE code ='SMR';
 
 SELECT * FROM city WHERE countrycode = 'SMR';
 
+-- Clue #5: We're close! Our South American agent says she just got a taxi at the airport, 
+-- and is headed towards the capital! Look up the country's capital, and get there pronto! 
+-- Send us the name of where you're headed and we'll follow right behind you!
+
+SELECT name FROM city WHERE id= 3171;
+
+-- Clue #6: Oh no, she pulled a switch: there are two cities with very similar names,
+-- but in totally different parts of the globe! She's headed to South America as we speak; 
+-- go find a city whose name is like the one we were 
+-- headed to, but doesn't end the same. 
+-- Find out the city, and do another search for what country it's in. Hurry!
+
